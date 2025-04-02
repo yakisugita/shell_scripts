@@ -15,7 +15,7 @@ current_ver=$(echo "stop" |./bedrock_server | grep Version | cut -d " " -f 5)
 echo -e "\e[32m現在バージョン:" $current_ver "\e[m \n"
 
 #webスクレイピングで最新バージョンのDLリンクを取得(chromeのUA使用)
-latest_link=$(curl -s -H "User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; GTB6.5; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; MDDS; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)" https://www.minecraft.net/en-us/download/server/bedrock | grep https://minecraft.azureedge.net/bin-linux/ | cut -d '"' -f 2)
+latest_link=$(curl -s -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" https://www.minecraft.net/en-us/download/server/bedrock | grep https://www.minecraft.net/bedrockdedicatedserver/bin-linux/ | cut -d '"' -f 2)
 
 #バージョン部分のみを抽出
 latest_ver=$(echo $latest_link | cut -d "-" -f 4 | sed -e "s/.zip//")
