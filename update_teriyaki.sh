@@ -37,7 +37,7 @@ echo "コピー完了"
 
 echo "最新バージョンのzipをダウンロードしています..."
 # -nv:進捗を表示せず結果だけ表示
-wget -nv $latest_link
+wget -nv $latest_link -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
 
 echo "zipを解凍しています..."
 unzip -o -q bedrock-server-$latest_ver.zip
