@@ -47,5 +47,5 @@ cd $backup_dir/$current_ver
 cp permissions.json server.properties allowlist.json $server_dir
 echo "tarでアーカイブしています"
 cd $backup_dir
-tar -c -f $current_ver.tar $current_ver --remove-files
+tar -zcf $current_ver.tar $current_ver --remove-files
 echo "作業完了"
